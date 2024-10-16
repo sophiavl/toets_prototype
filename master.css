@@ -6,7 +6,7 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #f5f5f5;
-  flex-direction: column; /* Zet de flex-direction naar kolom om items onder elkaar te plaatsen */
+  flex-direction: column;
 }
 
 .progress-bar {
@@ -14,108 +14,62 @@ body {
   background-color: #e0e0e0;
   border-radius: 5px;
   margin-bottom: 20px;
-  position: fixed; /* Maak de progressiebalk vast aan de bovenkant */
-  top: 0; /* Zet de progressiebalk aan de bovenkant */
-  left: 0; /* Zorg ervoor dat het begint vanaf de linkerzijde */
-  z-index: 1000; /* Zorg ervoor dat het boven andere elementen verschijnt */
-  padding: 5px; /* Voeg padding toe rondom de progressiebalk */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Voeg een schaduw toe voor een diepte-effect */
+  position: fixed; /* Fixed at the top */
+  top: 0; /* Align to top */
+  left: 0; /* Start from left */
+  z-index: 1000; /* Above other elements */
+  padding: 5px; /* Padding around the progress bar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for depth */
 }
 
 .progress {
   height: 10px;
-  width: 0;
-  background-color: #3498db;
-  border-radius: 5px;
+  width: 0; /* Initial width is 0 to start empty */
+  background-color: #3498db; /* Progress color */
+  border-radius: 5px; /* Rounded corners */
+  transition: width 0.3s ease; /* Smooth transition */
 }
 
 .quiz-container {
   background-color: white;
-  width: 80%;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  max-height: 100vh;
+  width: 400px;
   text-align: center;
-  margin-top: 70px; /* Verhoog de marge boven de quiz-container om rekening te houden met de progressiebalk */
+  margin-top: 70px;
 }
 
 h2 {
   margin-bottom: 20px;
 }
 
-.question-img {
-  width: 10rem;
-  height: 10rem;
-}
-
-
-
-#quiz {
-  display: flex;
-  flex-direction: column; /* Zorg ervoor dat elementen onder elkaar staan */
-  align-items: center; /* Centreer de items horizontaal */
-}
-
 .answers {
   display: flex;
+  flex-direction: column;
 }
 
 .answer {
-  background-color: #e2e2e2; /* Standaard achtergrondkleur */
-  border: 2px solid #2980b9; /* Blauwe border */
-  color: black; /* Zwarte tekst */
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Animatie voor de achtergrondkleur en tekstkleur */
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-img {
-  max-height: 100%;
-  max-width: 30%;
-}
-
-.answer:hover {
-  background-color: #d1d1d1; /* Kleur bij hover */
-}
-
-.selected {
-  background-color: #2980b9 !important; /* Blauwe achtergrond als geselecteerd */
-  color: #e2e2e2 !important; /* Lichte tekstkleur als geselecteerd */
-}
-/* 
-.image-answer {
-  background-color: #3498db; /* Aangepaste kleur voor afbeelding antwoorden */
-
-.audio-answer {
-  background-color: #2ecc71; /* Aangepaste kleur voor audio antwoorden */
-}
-
-.text-answer {
-  background-color: #e67e22; /* Aangepaste kleur voor tekst antwoorden */
-}
-*/ .answer img,
-.answer audio {
+.answer img, .answer audio {
   width: 100%;
-  height: 10rem;
-  width: 10rem;
+  height: auto;
 }
 
-.answers{
-  max-height: 50vh;
-  width: 80vw;
-}
-
-.answers button{
-  width: 33%;
-}
-
-/* 
 .answer:hover {
-  opacity: 0.8; /* Verminderde opacity bij hover voor visuele feedback */
-*/ #result {
+  background-color: #2980b9;
+}
+
+#result {
   margin-top: 20px;
   font-size: 1.2em;
   font-weight: bold;
@@ -123,20 +77,18 @@ img {
 }
 
 .submit-btn {
-  background-color: #3498db; /* Standaardkleur van de knop */
+  background-color: #f39c12;
   color: white;
   border: none;
-  padding: 15px;
-  margin-top: 4rem; /* Ruimte boven de knop */
+  padding: 10px;
+  margin-top: 10px;
   cursor: pointer;
   border-radius: 5px;
-  height: min-content;
-  width: min-content;
-  font-size: 2rem;
+  display: none;
 }
 
 .submit-btn:hover {
-  background-color: #2980b9; /* Kleur bij hover */
+  background-color: #e67e22;
 }
 
 .next-btn {
@@ -147,20 +99,41 @@ img {
   margin-top: 10px;
   cursor: pointer;
   border-radius: 5px;
-  display: none; /* Start met de knop verborgen */
+  display: none;
 }
 
 .next-btn:hover {
   background-color: #27ae60;
 }
 
-.audio-button {
-  background-color: transparent;
-  border-radius: 10px;
-  border: none;
-  color: white;
+#question img {
+  height: 300px;
 }
 
-button {
-  cursor: pointer;
+.answer-content {
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+}
+
+.answer img {
+  width: 100px;
+  height: auto;
+}
+
+.answer audio {
+  width: 100%;
+  height: 2rem;
+}
+
+.answers.image-options {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.answer input[type="radio"] {
+  margin-right: 10px;
 }
