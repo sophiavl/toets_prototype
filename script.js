@@ -1,6 +1,15 @@
 const quizData = [
   {
     type: "text",
+    question: "aardappel",
+    answers: [
+      { type: "image", content: "schrift.png", correct: false },
+      { type: "image", content: "glas.png", correct: false },
+      { type: "image", content: "aardappel.png", correct: true },
+    ],
+  },
+  {
+    type: "text",
     question: "kaas",
     answers: [
       { type: "image", content: "brood.png", correct: false },
@@ -69,6 +78,15 @@ const quizData = [
       { type: "image", content: "potlood.png", correct: false },
       { type: "image", content: "vork.png", correct: true },
       { type: "image", content: "appel.png", correct: false },
+    ],
+  },
+  {
+    type: "audio",
+    question: "glas.mp3",
+    answers: [
+      { type: "text", content: "appel", correct: false },
+      { type: "text", content: "schrift", correct: false },
+      { type: "text", content: "glas", correct: true },
     ],
   },
 ];
