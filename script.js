@@ -1,86 +1,78 @@
 const quizData = [
   {
     type: "text",
-    question: "banaan",
+    question: "kaas",
     answers: [
-      { type: "image", content: "banaan.png", correct: true },
-      { type: "image", content: "tas.png", correct: false },
-      { type: "image", content: "glas.png", correct: false },
-    ],
-  },
-  {
-    type: "audio",
-    question: "melk.mp3",
-    answers: [
-      { type: "text", content: "ei", correct: false },
-      { type: "text", content: "melk", correct: true },
-      { type: "text", content: "pen", correct: false },
+      { type: "image", content: "brood.png", correct: false },
+      { type: "image", content: "kaas.png", correct: true },
+      { type: "image", content: "appel.png", correct: false },
     ],
   },
   {
     type: "image",
-    question: "ei.png",
+    question: "appel.png",
     answers: [
-      { type: "audio", content: "mes.mp3", correct: false },
-      { type: "audio", content: "map.mp3", correct: false },
-      { type: "audio", content: "ei.mp3", correct: true },
+      { type: "audio", content: "kaas.mp3", correct: false },
+      { type: "audio", content: "appel.mp3", correct: true },
+      { type: "audio", content: "brood.mp3", correct: false },
+    ],
+  },
+  {
+    type: "audio",
+    question: "brood.mp3",
+    answers: [
+      { type: "text", content: "kaas", correct: false },
+      { type: "text", content: "brood", correct: true },
+      { type: "text", content: "appel", correct: false },
+    ],
+  },
+  {
+    type: "image",
+    question: "schrift.png",
+    answers: [
+      { type: "audio", content: "gum.mp3", correct: false },
+      { type: "audio", content: "schrift.mp3", correct: true },
+      { type: "audio", content: "potlood.mp3", correct: false },
     ],
   },
   {
     type: "text",
-    question: "tas",
+    question: "potlood",
     answers: [
-      { type: "image", content: "pen.png", correct: false },
-      { type: "image", content: "tas.png", correct: true },
-      { type: "image", content: "banaan.png", correct: false },
+      { type: "image", content: "gum.png", correct: false },
+      { type: "image", content: "potlood.png", correct: true },
+      { type: "image", content: "kaas.png", correct: false },
     ],
   },
   {
     type: "audio",
-    question: "pen.mp3",
+    question: "gum.mp3",
     answers: [
-      { type: "text", content: "banaan", correct: false },
-      { type: "text", content: "pen", correct: true },
-      { type: "text", content: "mes", correct: false },
+      { type: "text", content: "brood", correct: false },
+      { type: "text", content: "gum", correct: true },
+      { type: "text", content: "appel", correct: false },
     ],
   },
   {
     type: "image",
-    question: "map.png",
+    question: "bord.png",
     answers: [
-      { type: "audio", content: "banaan.mp3", correct: false },
-      { type: "audio", content: "melk.mp3", correct: false },
-      { type: "audio", content: "map.mp3", correct: true },
+      { type: "audio", content: "kaas.mp3", correct: false },
+      { type: "audio", content: "bord.mp3", correct: true },
+      { type: "audio", content: "glas.mp3", correct: false },
     ],
   },
   {
     type: "text",
-    question: "mes",
+    question: "vork",
     answers: [
-      { type: "image", content: "melk.png", correct: false },
-      { type: "image", content: "tas.png", correct: false },
-      { type: "image", content: "mes.png", correct: true },
-    ],
-  },
-  {
-    type: "audio",
-    question: "pan.mp3",
-    answers: [
-      { type: "text", content: "pen", correct: false },
-      { type: "text", content: "pan", correct: true },
-      { type: "text", content: "ei", correct: false },
-    ],
-  },
-  {
-    type: "image",
-    question: "glas.png",
-    answers: [
-      { type: "audio", content: "glas.mp3", correct: true },
-      { type: "audio", content: "banaan.mp3", correct: false },
-      { type: "audio", content: "map.mp3", correct: false },
+      { type: "image", content: "potlood.png", correct: false },
+      { type: "image", content: "vork.png", correct: true },
+      { type: "image", content: "appel.png", correct: false },
     ],
   },
 ];
+
 
 let currentQuestion = 0;
 let score = 0;
