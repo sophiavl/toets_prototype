@@ -1,36 +1,91 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multiple Choice Quiz</title>
-    <link rel="stylesheet" href="master.css">
-</head>
-<body>
-    <div class="quiz-container">
-        <div class="progress-bar">
-            <div id="progress" class="progress"></div>
+    <link rel="stylesheet" href="master.css" />
+  </head>
+  <body>
+    <div id="smiley-container" class="smiley-container">
+      <div class="smileys">
+        <img
+          src="images/happyFace.png"
+          alt="Happy"
+          onclick="selectSmiley('happy')"
+          id="happy-smiley"
+          class="smiley"
+        />
+        <img
+          src="images/neutralFace.png"
+          alt="Neutral"
+          onclick="selectSmiley('neutral')"
+          id="neutral-smiley"
+          class="smiley"
+        />
+        <img
+          src="images/sadFace.png"
+          alt="Sad"
+          onclick="selectSmiley('sad')"
+          id="sad-smiley"
+          class="smiley"
+        />
+      </div>
+      <button
+        id="start-quiz-btn"
+        class="start-quiz-btn"
+        onclick="startQuiz()"
+        disabled
+      >
+        <img src="images/whiteArrow.png" class="arrow" />
+      </button>
+    </div>
+    <div id="quiz-container" class="quiz-container" style="display: none;">
+      <div class="progress-bar">
+        <div id="progress" class="progress"></div>
+      </div>
+      <div id="quiz">
+        <h2 id="question"></h2>
+        <div class="answers">
+          <label class="answer">
+            <input
+              type="radio"
+              name="answer"
+              id="answer1"
+              onclick="selectAnswer(0)"
+            />
+            <span class="answer-content"></span>
+          </label>
+          <label class="answer">
+            <input
+              type="radio"
+              name="answer"
+              id="answer2"
+              onclick="selectAnswer(1)"
+            />
+            <span class="answer-content"></span>
+          </label>
+          <label class="answer">
+            <input
+              type="radio"
+              name="answer"
+              id="answer3"
+              onclick="selectAnswer(2)"
+            />
+            <span class="answer-content"></span>
+          </label>
         </div>
-        <div id="quiz">
-            <h2 id="question"></h2>
-            <div class="answers">
-              <label class="answer">
-                  <input type="radio" name="answer" id="answer1" onclick="selectAnswer(0)">
-                  <span class="answer-content"></span>
-              </label>
-              <label class="answer">
-                  <input type="radio" name="answer" id="answer2" onclick="selectAnswer(1)">
-                  <span class="answer-content"></span>
-              </label>
-              <label class="answer">
-                  <input type="radio" name="answer" id="answer3" onclick="selectAnswer(2)">
-                  <span class="answer-content"></span>
-              </label>
-          </div>
-          <button id="submit" class="submit-btn" onclick="submitAnswer()" style="display: none;">Indienen</button>
-        </div>
-        <div id="result"></div>
+        <button
+          id="submit"
+          class="submit-btn"
+          onclick="submitAnswer()"
+          style="display: none;"
+        >
+          Indienen
+        </button>
+      </div>
+      <div id="result"></div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
