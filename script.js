@@ -111,7 +111,7 @@ function loadQuiz() {
     currentQuiz.answers.forEach((answer, index) => {
       answerButtons[
         index
-      ].innerHTML = `<img src="${answer.content}" alt="Antwoord" style="max-width: 100%; object-fit:contain">`;
+      ].innerHTML = `<img src="${answer.content}" alt="Antwoord" style="object-fit:contain">`;
       answerButtons[index].onclick = () => selectAnswer(index); // Selecteer het antwoord
       answerButtons[index].style.pointerEvents = "auto"; // Zet pointer-events weer aan
     });
@@ -125,11 +125,10 @@ function loadQuiz() {
       answerButtons[index].onclick = () => selectAnswer(index); // Selecteer het antwoord
       answerButtons[index].style.pointerEvents = "auto"; // Zet pointer-events weer aan
       answerButtons[index].style.backgroundColor = "#e2e2e2";
-      answerButtons[index].style.width = "6rem";
       answerButtons[index].style.fontSize = "1.5rem";
     });
   } else if (currentQuiz.type === "image") {
-    questionElement.innerHTML = `<img src="${currentQuiz.question}" alt="Vraag" style="max-width: 80%;">`;
+    questionElement.innerHTML = `<img src="${currentQuiz.question}" alt="Vraag" style="">`;
 
     // Antwoorden instellen (met audio)
     const answerButtons = document.querySelectorAll(".answer");

@@ -31,10 +31,11 @@ body {
 
 .quiz-container {
   background-color: white;
+  width: 80%;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  height: 100vh;
+  max-height: 100vh;
   text-align: center;
   margin-top: 70px; /* Verhoog de marge boven de quiz-container om rekening te houden met de progressiebalk */
 }
@@ -48,9 +49,7 @@ h2 {
   height: 10rem;
 }
 
-img {
-  max-height: 100%;
-}
+
 
 #quiz {
   display: flex;
@@ -60,9 +59,6 @@ img {
 
 .answers {
   display: flex;
-  flex-direction: row; /* Zet flex-direction naar row om knoppen naast elkaar te plaatsen */
-  justify-content: space-between; /* Zorg ervoor dat er ruimte tussen de knoppen is */
-  flex-wrap: wrap; /* Zorg ervoor dat knoppen kunnen doorlopen naar de volgende regel als ze niet passen */
 }
 
 .answer {
@@ -74,6 +70,11 @@ img {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease; /* Animatie voor de achtergrondkleur en tekstkleur */
+}
+
+img {
+  max-height: 100%;
+  max-width: 30%;
 }
 
 .answer:hover {
@@ -101,6 +102,16 @@ img {
   height: 10rem;
   width: 10rem;
 }
+
+.answers{
+  max-height: 50vh;
+  width: 80vw;
+}
+
+.answers button{
+  width: 33%;
+}
+
 /* 
 .answer:hover {
   opacity: 0.8; /* Verminderde opacity bij hover voor visuele feedback */
