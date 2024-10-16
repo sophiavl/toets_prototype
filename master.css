@@ -1,0 +1,155 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f5f5f5;
+  flex-direction: column; /* Zet de flex-direction naar kolom om items onder elkaar te plaatsen */
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  position: fixed; /* Maak de progressiebalk vast aan de bovenkant */
+  top: 0; /* Zet de progressiebalk aan de bovenkant */
+  left: 0; /* Zorg ervoor dat het begint vanaf de linkerzijde */
+  z-index: 1000; /* Zorg ervoor dat het boven andere elementen verschijnt */
+  padding: 5px; /* Voeg padding toe rondom de progressiebalk */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Voeg een schaduw toe voor een diepte-effect */
+}
+
+.progress {
+  height: 10px;
+  width: 0;
+  background-color: #3498db;
+  border-radius: 5px;
+}
+
+.quiz-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  text-align: center;
+  margin-top: 70px; /* Verhoog de marge boven de quiz-container om rekening te houden met de progressiebalk */
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.question-img {
+  width: 10rem;
+  height: 10rem;
+}
+
+img {
+  max-height: 100%;
+}
+
+#quiz {
+  display: flex;
+  flex-direction: column; /* Zorg ervoor dat elementen onder elkaar staan */
+  align-items: center; /* Centreer de items horizontaal */
+}
+
+.answers {
+  display: flex;
+  flex-direction: row; /* Zet flex-direction naar row om knoppen naast elkaar te plaatsen */
+  justify-content: space-between; /* Zorg ervoor dat er ruimte tussen de knoppen is */
+  flex-wrap: wrap; /* Zorg ervoor dat knoppen kunnen doorlopen naar de volgende regel als ze niet passen */
+}
+
+.answer {
+  background-color: #e2e2e2; /* Standaard achtergrondkleur */
+  border: 2px solid #2980b9; /* Blauwe border */
+  color: black; /* Zwarte tekst */
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animatie voor de achtergrondkleur en tekstkleur */
+}
+
+.answer:hover {
+  background-color: #d1d1d1; /* Kleur bij hover */
+}
+
+.selected {
+  background-color: #2980b9 !important; /* Blauwe achtergrond als geselecteerd */
+  color: #e2e2e2 !important; /* Lichte tekstkleur als geselecteerd */
+}
+/* 
+.image-answer {
+  background-color: #3498db; /* Aangepaste kleur voor afbeelding antwoorden */
+
+.audio-answer {
+  background-color: #2ecc71; /* Aangepaste kleur voor audio antwoorden */
+}
+
+.text-answer {
+  background-color: #e67e22; /* Aangepaste kleur voor tekst antwoorden */
+}
+*/ .answer img,
+.answer audio {
+  width: 100%;
+  height: 10rem;
+  width: 10rem;
+}
+/* 
+.answer:hover {
+  opacity: 0.8; /* Verminderde opacity bij hover voor visuele feedback */
+*/ #result {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.submit-btn {
+  background-color: #3498db; /* Standaardkleur van de knop */
+  color: white;
+  border: none;
+  padding: 15px;
+  margin-top: 4rem; /* Ruimte boven de knop */
+  cursor: pointer;
+  border-radius: 5px;
+  height: min-content;
+  width: min-content;
+  font-size: 2rem;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9; /* Kleur bij hover */
+}
+
+.next-btn {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: none; /* Start met de knop verborgen */
+}
+
+.next-btn:hover {
+  background-color: #27ae60;
+}
+
+.audio-button {
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}

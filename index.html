@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple Choice Quiz</title>
+    <link rel="stylesheet" href="master.css" />
+  </head>
+  <body>
+    <div class="quiz-container">
+      <div class="progress-bar">
+        <div id="progress" class="progress"></div>
+      </div>
+      <div id="quiz">
+        <h2 id="question">Wat is dit?</h2>
+        <div class="answers">
+          <button
+            class="answer image-answer"
+            onclick="selectAnswer(0)"
+            id="answer1"
+          >
+            <img class="question-img" src="image1.jpg" alt="Antwoord 1" />
+          </button>
+          <button
+            class="answer audio-answer"
+            onclick="selectAnswer(1)"
+            id="answer2"
+          >
+            <audio controls>
+              <source src="audio1.mp3" type="audio/mpeg" />
+            </audio>
+          </button>
+          <button
+            class="answer text-answer"
+            onclick="selectAnswer(2)"
+            id="answer3"
+          >
+            Antwoord 3
+          </button>
+        </div>
+        <button
+          id="submit"
+          class="submit-btn"
+          onclick="submitAnswer()"
+          style="display: none;"
+        >
+          Indienen
+        </button>
+        <button
+          id="next"
+          class="next-btn"
+          onclick="nextQuestion()"
+          style="display: none;"
+        >
+          Volgende
+        </button>
+      </div>
+      <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
