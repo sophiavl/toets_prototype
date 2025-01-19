@@ -1,83 +1,147 @@
 const quizData = [
+  //school
+
   {
     type: "text",
-    question: "banaan",
+    question: "gum",
     answers: [
-      { type: "image", content: "banaan.png", correct: true },
-      { type: "image", content: "tas.png", correct: false },
-      { type: "image", content: "glas.png", correct: false },
+      { type: "image", content: "gum.png", correct: true },
+      { type: "image", content: "schrift.png", correct: false },
+      { type: "image", content: "klok.png", correct: false },
     ],
   },
   {
     type: "audio",
-    question: "melk.mp3",
+    question: "klok.mp3",
     answers: [
-      { type: "text", content: "ei", correct: false },
-      { type: "text", content: "melk", correct: true },
-      { type: "text", content: "pen", correct: false },
+      { type: "text", content: "lijm", correct: false },
+      { type: "text", content: "klok", correct: true },
+      { type: "text", content: "brood", correct: false },
     ],
   },
   {
     type: "image",
-    question: "ei.png",
+    question: "lijm.png",
     answers: [
-      { type: "audio", content: "mes.mp3", correct: false },
-      { type: "audio", content: "map.mp3", correct: false },
-      { type: "audio", content: "ei.mp3", correct: true },
+      { type: "audio", content: "boek.mp3", correct: false },
+      { type: "audio", content: "deksel.mp3", correct: false },
+      { type: "audio", content: "lijm.mp3", correct: true },
     ],
   },
+
+  //keuken
   {
     type: "text",
-    question: "tas",
+    question: "waterkoker",
     answers: [
-      { type: "image", content: "pen.png", correct: false },
-      { type: "image", content: "tas.png", correct: true },
-      { type: "image", content: "banaan.png", correct: false },
+      { type: "image", content: "keukenrol.png", correct: false },
+      { type: "image", content: "waterkoker.png", correct: true },
+      { type: "image", content: "brood.png", correct: false },
     ],
   },
   {
     type: "audio",
-    question: "pen.mp3",
+    question: "spatel.mp3",
     answers: [
-      { type: "text", content: "banaan", correct: false },
-      { type: "text", content: "pen", correct: true },
-      { type: "text", content: "mes", correct: false },
+      { type: "text", content: "melkpak", correct: false },
+      { type: "text", content: "spatel", correct: true },
+      { type: "text", content: "deksel", correct: false },
     ],
   },
   {
     type: "image",
-    question: "map.png",
+    question: "blender.png",
     answers: [
-      { type: "audio", content: "banaan.mp3", correct: false },
-      { type: "audio", content: "melk.mp3", correct: false },
-      { type: "audio", content: "map.mp3", correct: true },
+      { type: "audio", content: "olijfolie.mp3", correct: false },
+      { type: "audio", content: "klok.mp3", correct: false },
+      { type: "audio", content: "blender.mp3", correct: true },
     ],
   },
+
+  //gymzaal
   {
     type: "text",
-    question: "mes",
+    question: "racket",
     answers: [
       { type: "image", content: "melk.png", correct: false },
-      { type: "image", content: "tas.png", correct: false },
-      { type: "image", content: "mes.png", correct: true },
+      { type: "image", content: "schrift.png", correct: false },
+      { type: "image", content: "racket.png", correct: true },
     ],
   },
   {
     type: "audio",
-    question: "pan.mp3",
+    question: "rolschaats.mp3",
     answers: [
-      { type: "text", content: "pen", correct: false },
-      { type: "text", content: "pan", correct: true },
-      { type: "text", content: "ei", correct: false },
+      { type: "text", content: "voetbal", correct: false },
+      { type: "text", content: "rolschaats", correct: true },
+      { type: "text", content: "eieren", correct: false },
     ],
   },
   {
     type: "image",
-    question: "glas.png",
+    question: "bokshandschoen.png",
     answers: [
-      { type: "audio", content: "glas.mp3", correct: true },
-      { type: "audio", content: "banaan.mp3", correct: false },
-      { type: "audio", content: "map.mp3", correct: false },
+      { type: "audio", content: "bokshandschoen.mp3", correct: true },
+      { type: "audio", content: "waterkoker.mp3", correct: false },
+      { type: "audio", content: "wandelstok.mp3", correct: false },
+    ],
+  },
+
+  //supermarkt
+  {
+    type: "text",
+    question: "ananas",
+    answers: [
+      { type: "image", content: "brood.png", correct: false },
+      { type: "image", content: "eieren.png", correct: false },
+      { type: "image", content: "ananas.png", correct: true },
+    ],
+  },
+  {
+    type: "audio",
+    question: "sinaasappel.mp3",
+    answers: [
+      { type: "text", content: "racket", correct: false },
+      { type: "text", content: "sinaasappel", correct: true },
+      { type: "text", content: "bijenkorf", correct: false },
+    ],
+  },
+  {
+    type: "image",
+    question: "Brood.png",
+    answers: [
+      { type: "audio", content: "boterham.mp3", correct: true },
+      { type: "audio", content: "olijfolie.mp3", correct: false },
+      { type: "audio", content: "melkpak.mp3", correct: false },
+    ],
+  },
+
+  //bos
+  {
+    type: "text",
+    question: "wandelstok",
+    answers: [
+      { type: "image", content: "bijenkorf.png", correct: false },
+      { type: "image", content: "bokshandschoen.png", correct: false },
+      { type: "image", content: "wandelstok.png", correct: true },
+    ],
+  },
+  {
+    type: "audio",
+    question: "dennenappel.mp3",
+    answers: [
+      { type: "text", content: "boterham", correct: false },
+      { type: "text", content: "dennenappel", correct: true },
+      { type: "text", content: "slakkenhuis", correct: false },
+    ],
+  },
+  {
+    type: "image",
+    question: "paddenstoel.png",
+    answers: [
+      { type: "audio", content: "paddenstoel.mp3", correct: true },
+      { type: "audio", content: "frisbee.mp3", correct: false },
+      { type: "audio", content: "kastanje.mp3", correct: false },
     ],
   },
 ];
